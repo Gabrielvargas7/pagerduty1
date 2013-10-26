@@ -1,0 +1,10 @@
+Use this README file to introduce your application and point to useful places in the API for learning more.
+Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+
+
+      curl -H "Content-type: application/json" -H "Authorization: Token token=VxuRAAxQoTgTjbo7wmmG" -X GET -G \
+                "https://webdemo.pagerduty.com/api/v1/schedules"
+
+
+                http://localhost:3000/api/products -H 'Authorization: Token token="c576f0136149a2e2d9127b3901015545"'
