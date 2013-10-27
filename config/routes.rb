@@ -1,4 +1,18 @@
 Pagerduty::Application.routes.draw do
+  #resources :incidents
+
+  #root to: 'incidents#index'
+  root to: 'home#welcome'
+
+  match '/home/welcome', to:
+         'home#welcome', via: :get
+
+  match '/incidents/index_incidents', to:
+         'incidents#index_incidents', via: :get,as: :incidents_index_incidents
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

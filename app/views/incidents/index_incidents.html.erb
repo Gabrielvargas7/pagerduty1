@@ -1,0 +1,35 @@
+<h1>Listing incidents</h1>
+
+<h3>Today is <%= Date.today%></h3>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Created on</th>
+    <th>Status</th>
+    <th>Assigned to user</th>
+    <th>Last Status Change By</th>
+
+
+    <th></th>
+
+  </tr>
+
+
+  <% @json_incidents['incidents'].each do |incident| %>
+      <tr>
+        <td><%= incident['created_on'] %></td>
+        <td><%= incident['status'] %></td>
+        <td>
+          <% if incident['assigned_to_user'].nil? %>
+              not assigned
+          <%else %>
+              <%= incident['assigned_to_user'] %>
+          <%end %>
+        </td>
+        <td><%= incident['last_status_change_by'] %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br />
+

@@ -6,5 +6,25 @@ Run "rake doc:app" to generate API documentation for your models, controllers, h
       curl -H "Content-type: application/json" -H "Authorization: Token token=VxuRAAxQoTgTjbo7wmmG" -X GET -G \
                 "https://webdemo.pagerduty.com/api/v1/schedules"
 
+                https://webdemo.pagerduty.com/api/v1/schedules?access_token=VxuRAAxQoTgTjbo7wmmG
 
-                http://localhost:3000/api/products -H 'Authorization: Token token="c576f0136149a2e2d9127b3901015545"'
+
+
+
+
+     curl -H "Content-type: application/json" -H "Authorization: Token token=VxuRAAxQoTgTjbo7wmmG" -X GET -G \
+                    --data-urlencode "since=2013-09-01" \
+                    --data-urlencode "until=2013-10-20" \
+                    --data-urlencode "sort_by=created_on:desc" \
+                    --data-urlencode "limit=50" \
+                    --data-urlencode "offset=0" \
+                    "https://webdemo.pagerduty.com/api/v1/incidents"
+
+
+                    rails g scaffold incident incident_created_date:date assigned_to_user:string status:string incident_number:integer
+
+
+
+                    curl -H "Content-type: application/json" -H "Authorization: Token token=VxuRAAxQoTgTjbo7wmmG" -X GET -G \
+                        --data-urlencode "status=resolved" \
+                        "https://webdemo.pagerduty.com/api/v1/incidents"

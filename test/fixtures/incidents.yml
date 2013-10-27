@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  incident_created_date: 2013-10-26
+  assigned_to_user: MyString
+  status: MyString
+  incident_number: 1
+
+two:
+  incident_created_date: 2013-10-26
+  assigned_to_user: MyString
+  status: MyString
+  incident_number: 1
